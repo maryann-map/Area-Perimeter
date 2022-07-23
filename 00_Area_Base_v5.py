@@ -23,7 +23,7 @@ def not_blank(question):
     while not valid:
         response = input(question)
 
-        if response !="":
+        if response != "":
             return response
         else:
             print("Sorry, this can't be blank. "
@@ -122,10 +122,10 @@ def int_checker(question):
 
 # Square function
 def square():
-    print("square")
+    print("Square")
     # Asking user for the sides of shape
     length = int_checker("What is the length?")
-    width = int_checker("What is the width")
+    width = int_checker("What is the width?")
 
     # Calculating Area
     area = length * width
@@ -134,16 +134,17 @@ def square():
     perimeter = (2*length) + (2*width)
 
     # Print area and perimeter
-    print("Area & Perimeter: {} & {}".format(area, perimeter))
+    print("Area: {:.2f}".format(area))
+    print("Perimeter: {:.2f}".format(perimeter))
 
 
 # Triangle function
 def triangle():
-    print("triangle")
-    side1 = int_checker("What is the length of side1:")
-    side2 = int_checker("What is the length of side2:")
-    height = int_checker("What is the height:")
-    base = int_checker("What is the base:")
+    print("Triangle")
+    side1 = int_checker("What is the length of side1?")
+    side2 = int_checker("What is the length of side2?")
+    height = int_checker("What is the height?")
+    base = int_checker("What is the base?")
 
     # Calculating Area
     area = (base / 2) * height
@@ -152,14 +153,15 @@ def triangle():
     perimeter = side1 + side2 + base
 
     # Print area and perimeter
-    print("Area & Perimeter: {} & {}".format(area, perimeter))
+    print("Area: {:.2f}".format(area))
+    print("Perimeter: {:.2f}".format(perimeter))
 
 
 # Rectangle function
 def rectangle():
-    print("rectangle")
+    print("Rectangle")
     length = int_checker("What is the length?")
-    width = int_checker("What is the width")
+    width = int_checker("What is the width?")
 
     # Calculating Area
     area = length * width
@@ -168,14 +170,15 @@ def rectangle():
     perimeter = (2*length) + (2*width)
 
     # Print are and perimeter
-    print("Area & Perimeter: {} & {}".format(area, perimeter))
+    print("Area: {:.2f}".format(area))
+    print("Perimeter: {:.2f}".format(perimeter))
 
 
 # Circle function
 def circle():
-    print("circle")
+    print("Circle")
     # Ask user for radius of circle
-    radius = int_checker("What is the Radius:")
+    radius = int_checker("What is the Radius?")
 
     # Calculating Area pie r 2
     area = math.pi * radius * radius
@@ -184,14 +187,16 @@ def circle():
     perimeter = 2 * math.pi * radius
 
     # Print area and perimeter
-    print("Area & Perimeter: {:.2f} & {:.2f}".format(area, perimeter))
+    print("Area: {:.2f}".format(area))
+    print("Perimeter: {:.2f}".format(perimeter))
+
 
 # Parallelogram function (para = short form to prevent spelling errors)
 def para():
     print("parallelogram")
     # Asking user for the sides of shape
     base = int_checker("What is the base?")
-    height = int_checker("What is the height")
+    height = int_checker("What is the height?")
     side = int_checker("What is length of side?")
 
     # Calculating Area
@@ -201,10 +206,11 @@ def para():
     perimeter = 2 * (base + side)
 
     # Print area and perimeter
-    print("Area & Perimeter: {} & {}".format(area, perimeter))
-
+    print("Area: {:.2f}".format(area))
+    print("Perimeter: {:.2f}".format(perimeter))
 
 # Main Routine
+
 
 # valid options for yes / no questions
 yes_no = [
@@ -231,6 +237,3 @@ else:
 
 print()
 print("Finish")
-
-
-
