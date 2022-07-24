@@ -6,6 +6,7 @@ using multiple if statements to check that valid_shape names is working for each
 # function goes here
 
 
+# String checker
 def string_check(choice, options):
     for var_list in options:
 

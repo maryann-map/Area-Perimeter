@@ -9,7 +9,8 @@ v2 - calling functions (tested, and it works)
 
 # Functions
 
-#Getting the shape name and make sure it is not blank
+
+# Getting the shape name and make sure it is not blank
 def not_blank(question):
     valid = False
 
@@ -21,27 +22,34 @@ def not_blank(question):
         else:
             print("Sorry, this can't be blank. "
                   "Please enter a shape name!")
+
+
 # Check if integer is valid (must be positive whole numbers)
 def int_checker():
     print("placeholder")
+
 
 # String checker
 def string_checker(list_of_allowable):
     print("place holder")
 
-# Addition function
+
+# Square function
 def square():
     print("square")
 
-# Subtraction function
+
+# Triangle function
 def triangle():
     print("triangle")
 
-# Multiplication function
+
+# Rectangle function
 def rectangle():
     print("rectangle")
 
-# Division function
+
+# Circle function
 def circle():
     print("circle")
 
@@ -50,14 +58,13 @@ def circle():
 
 # Main routine
 
-#start of loop
 
 # initialised loop so that it runs at least once
 shape = ""
 count = 0
 MAX_SHAPES = 5
 
-while shape !="xxx" and count < MAX_SHAPES:
+while shape != "xxx" and count < MAX_SHAPES:
 
     # Get details...
     shape = not_blank("Shape: ")
@@ -74,13 +81,10 @@ while shape !="xxx" and count < MAX_SHAPES:
         break
     else:
         print("Invalid")
-    count +=1
+    count += 1
 
 # Get dimensions of shape
 
 # Calculations
 
 # Print Area and Perimeter of shape
-
-
-

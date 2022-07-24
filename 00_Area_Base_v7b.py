@@ -17,9 +17,8 @@ import pandas as pd
 
 # Functions
 
+
 # Getting the shape name and make sure it is not blank
-
-
 def not_blank(question):
     valid = False
 
@@ -33,6 +32,7 @@ def not_blank(question):
                   "Please enter a shape name!")
 
 
+# String checker
 def string_check(choice, options):
     for var_list in options:
 
@@ -69,7 +69,7 @@ def get_shape():
         ["square", "s", "squ", "2"],  # first item is square
         ["rectangle", "r", "rec", "3"],
         ["triangle", "t", "tri", "4"],
-        ["parallelogram", "p", "para", "5"]
+        ["parallelogram", "p", "par", "5"]
     ]
 
     desired_shape = ""
@@ -126,6 +126,7 @@ def int_checker(question):
 # Square function
 def square():
     print("Square")
+    # Save to all_shapes list
     all_shapes.append("Square")
 
     # Asking user for the sides of shape
@@ -135,35 +136,40 @@ def square():
     # Calculating Area
     area = length * width
     round_area = round(area, 2)
+    # Save to area_sum list
     area_sum.append(round_area)
 
     # Calculating Perimeter
     perimeter = (2*length) + (2*width)
     round_perimeter = round(perimeter, 2)
+    # Save to perimeter_sum list
     perimeter_sum.append(round_perimeter)
 
-    user_area = int(input("What area did you get?"))
+    # Ask user what they got for area
+    user_area = float(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_area == area:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
+        print("Sorry that is wrong. The correct answer is {}.".format(round_area))
 
-    user_perimeter = int(input("What perimeter did you get?"))
+    # Ask user what they got for perimeter
+    user_perimeter = float(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_perimeter == perimeter:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}".format(perimeter))
+        print("Sorry that is wrong. The correct answer is {}".format(round_perimeter))
 
 
 # Triangle function
 def triangle():
     print("Triangle")
+    # Save to all_shapes list
     all_shapes.append("Triangle")
 
     side1 = int_checker("What is the length of side1?")
@@ -174,35 +180,40 @@ def triangle():
     # Calculating Area
     area = (base / 2) * height
     round_area = round(area, 2)
+    # Save to area_sum list
     area_sum.append(round_area)
 
     # Calculating Perimetr
     perimeter = side1 + side2 + base
     round_perimeter = round(perimeter, 2)
+
     perimeter_sum.append(round_perimeter)
 
-    user_area = int(input("What area did you get?"))
+    # Ask user what they got for area
+    user_area = float(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_area == area:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
+        print("Sorry that is wrong. The correct answer is {}.".format(round_area))
 
-    user_perimeter = int(input("What perimeter did you get?"))
+    # Ask user what they got for perimeter
+    user_perimeter = float(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_perimeter == perimeter:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}".format(perimeter))
+        print("Sorry that is wrong. The correct answer is {}".format(round_perimeter))
 
 
 # Rectangle function
 def rectangle():
     print("Rectangle")
+    # Save to all_shapes list
     all_shapes.append("Rectangle")
 
     length = int_checker("What is the length?")
@@ -211,35 +222,40 @@ def rectangle():
     # Calculating Area
     area = length * width
     round_area = round(area, 2)
+    # Save to area_sum list
     area_sum.append(round_area)
 
     # Calculating Perimeter
     perimeter = (2*length) + (2*width)
     round_perimeter = round(perimeter, 2)
+    # Save to perimeter_sum list
     perimeter_sum.append(round_perimeter)
 
-    user_area = int(input("What area did you get?"))
+    # Ask user what they got for area
+    user_area = float(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_area == area:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
+        print("Sorry that is wrong. The correct answer is {}.".format(round_area))
 
-    user_perimeter = int(input("What perimeter did you get?"))
+    # Ask user what they got for perimeter
+    user_perimeter = float(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_perimeter == perimeter:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}".format(perimeter))
+        print("Sorry that is wrong. The correct answer is {}".format(round_perimeter))
 
 
 # Circle function
 def circle():
     print("Circle")
+    # Save to all_shapes list
     all_shapes.append("Circle")
 
     # Ask user for radius of circle
@@ -248,35 +264,40 @@ def circle():
     # Calculating Area pie r 2
     area = math.pi * radius * radius
     round_area = round(area, 2)
+    # Save to area_sum list
     area_sum.append(round_area)
 
     # Calculating Perimeter 2 pie r
     perimeter = 2 * math.pi * radius
     round_perimeter = round(perimeter, 2)
+    # Save to perimeter_sum list
     perimeter_sum.append(round_perimeter)
 
-    user_area = int(input("What area did you get?"))
+    # Ask user what they got for area
+    user_area = float(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_area == area:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
+        print("Sorry that is wrong. The correct answer is {}.".format(round_area))
 
-    user_perimeter = int(input("What perimeter did you get?"))
+    # Ask user what they got for perimeter
+    user_perimeter = float(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_perimeter == perimeter:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}".format(perimeter))
+        print("Sorry that is wrong. The correct answer is {}".format(round_perimeter))
 
 
 # Parallelogram function (para = short form to prevent spelling errors)
 def para():
     print("Parallelogram")
+    # Save to all_shapes list
     all_shapes.append("Parallelogram")
 
     # Asking user for the sides of shape
@@ -287,30 +308,34 @@ def para():
     # Calculating Area
     area = base * height
     round_area = round(area, 2)
+    # Save to area_sum list
     area_sum.append(round_area)
 
     # Calculating Perimeter
     perimeter = 2 * (base + side)
     round_perimeter = round(perimeter, 2)
+    # Save to perimeter_sum list
     perimeter_sum.append(round_perimeter)
 
-    user_area = int(input("What area did you get?"))
+    # Ask user what they got for area
+    user_area = float(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_area == area:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
+        print("Sorry that is wrong. The correct answer is {}.".format(round_area))
 
-    user_perimeter = int(input("What perimeter did you get?"))
+    # Ask user what they got for perimeter
+    user_perimeter = float(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
     if user_perimeter == perimeter:
         print("Good Job! You got it right.")
     # if they got wrong answer then print 'sorry that is wrong'
     else:
-        print("Sorry that is wrong. The correct answer is {:.2f}".format(perimeter))
+        print("Sorry that is wrong. The correct answer is {}".format(round_perimeter))
 
 
 # Main Routine
@@ -349,9 +374,11 @@ if check_shape == "Yes":
 else:
     chosen_shape = []
 
+# Table of chosen shape and answers
 df = pd.DataFrame(list(zip(all_shapes, area_sum, perimeter_sum)), columns=['Shape', 'Area', 'Perimeter'])
 df = df.set_index('Shape')
 
+# Print Table
 print(df)
 
 

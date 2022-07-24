@@ -10,7 +10,6 @@ v5 - adding in string_checker & get_shape functions (include valid_shapes list)
 v6 - ask user what answer they got & compare with programmes answer (code in each shape function)
 v7 - summary of chosen shapes and their answers displayed in a table format
 v8 - introduction
-
 '''
 
 # Import library
@@ -59,6 +58,7 @@ def not_blank(question):
                   "Please enter a shape name!")
 
 
+# String checker
 def string_check(choice, options):
     for var_list in options:
 
@@ -378,9 +378,11 @@ if check_shape == "Yes":
 else:
     chosen_shape = []
 
+# Table of chosen shape and answers
 df = pd.DataFrame(list(zip(all_shapes, area_sum, perimeter_sum)), columns=['Shape', 'Area', 'Perimeter'])
 df = df.set_index('Shape')
 
+# Print Table
 print(df)
 
 

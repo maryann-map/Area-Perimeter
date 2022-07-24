@@ -127,6 +127,7 @@ def int_checker(question):
 # Square function
 def square():
     print("Square")
+    # Save to all_shapes list
     all_shapes.append("Square")
 
     # Asking user for the sides of shape
@@ -141,6 +142,7 @@ def square():
     perimeter = (2*length) + (2*width)
     perimeter_sum.append(perimeter)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -150,6 +152,7 @@ def square():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -163,6 +166,7 @@ def square():
 # Triangle function
 def triangle():
     print("Triangle")
+    # Save to all_shapes list
     all_shapes.append("Triangle")
 
     side1 = int_checker("What is the length of side1?")
@@ -178,6 +182,7 @@ def triangle():
     perimeter = side1 + side2 + base
     perimeter_sum.append(perimeter)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -187,6 +192,7 @@ def triangle():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -200,6 +206,7 @@ def triangle():
 # Rectangle function
 def rectangle():
     print("Rectangle")
+    # Save to all_shapes list
     all_shapes.append("Rectangle")
 
     length = int_checker("What is the length?")
@@ -213,6 +220,7 @@ def rectangle():
     perimeter = (2*length) + (2*width)
     perimeter_sum.append(perimeter)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -222,6 +230,7 @@ def rectangle():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -235,6 +244,7 @@ def rectangle():
 # Circle function
 def circle():
     print("Circle")
+    # Save to all_shapes list
     all_shapes.append("Circle")
 
     # Ask user for radius of circle
@@ -248,6 +258,7 @@ def circle():
     perimeter = 2 * math.pi * radius
     perimeter_sum.append(perimeter)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -257,6 +268,7 @@ def circle():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -270,6 +282,7 @@ def circle():
 # Parallelogram function (para = short form to prevent spelling errors)
 def para():
     print("Parallelogram")
+    # Save to all_shapes list
     all_shapes.append("Parallelogram")
 
     # Asking user for the sides of shape
@@ -285,6 +298,7 @@ def para():
     perimeter = 2 * (base + side)
     perimeter_sum.append(perimeter)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -294,6 +308,7 @@ def para():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -340,8 +355,10 @@ if check_shape == "Yes":
 else:
     chosen_shape = []
 
+# Table of chosen shape and answers
 df = pd.DataFrame(list(zip(all_shapes, area_sum, perimeter_sum)), columns=['Shape', 'Area', 'Perimeter'])
 
+# Print Table
 print(df)
 
 

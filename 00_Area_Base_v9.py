@@ -78,6 +78,7 @@ def get_instructions():
     print("1. Choose shape from one of the available shapes")
     print("2. Enter the dimensions of shape (eg: length & width")
     print("3. Enter your area and perimeter answer in 2 decimal place")
+    print("4. Enter xxx on 'Shape:' to end programme")
 
     # What to be aware of
     print("If you type something that is not one of the choices, then the question will repeat")
@@ -411,10 +412,11 @@ perimeter_sum = []
 # Start programme
 intro()
 
-
+# Table of chosen shape and answers
 df = pd.DataFrame(list(zip(all_shapes, area_sum, perimeter_sum)), columns=['Shape', 'Area', 'Perimeter'])
 df = df.set_index('Shape')
 
+# Print table
 print(df)
 
 outro()

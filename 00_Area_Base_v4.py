@@ -8,24 +8,24 @@ v4 - calculating the area and perimeter of each shape (I also replaced the lengt
 '''
 
 # Import library
+import math
 
 # Functions
 
+
 # Getting the shape name and make sure it is not blank
-import math
-
-
 def not_blank(question):
     valid = False
 
     while not valid:
         response = input(question)
 
-        if response !="":
+        if response != "":
             return response
         else:
             print("Sorry, this can't be blank. "
                   "Please enter a shape name!")
+
 
 # Check that integer is valid
 def int_checker(question):
@@ -48,9 +48,11 @@ def int_checker(question):
         except ValueError:
             print(error)
 
+
 # String checker
-def string_checker(list_of_allowable):
+def string_checker():
     print("place holder")
+
 
 # Square function
 def square():
@@ -59,7 +61,7 @@ def square():
     side1 = int_checker("What is the length?")
     side2 = int_checker("What is the width")
 
-    #Calculating Area
+    # Calculating Area
     area = side1 * side2
 
     # Calculating Perimeter
@@ -67,7 +69,6 @@ def square():
 
     # Print area and perimeter
     print("Area & Perimeter: {:.2f} & {:.2f}".format(area, perimeter))
-
 
 
 # Triangle function
@@ -88,14 +89,13 @@ def triangle():
     print("Area & Perimeter: {:.2f} & {:.2f}".format(area, perimeter))
 
 
-
 # Rectangle function
 def rectangle():
     print("rectangle")
     side1 = int_checker("What is the length?")
     side2 = int_checker("What is the width")
 
-    #Calculating Area
+    # Calculating Area
     area = side1 * side2
 
     # Calculating Perimeter
@@ -121,9 +121,6 @@ def circle():
     print("Area & Perimeter: {:.2f} & {:.2f}".format(area, perimeter))
 
 
-
-
-
 # Main Routine
 
 # Set up directions / lists needed to hold data
@@ -138,7 +135,7 @@ shape = ""
 count = 0
 MAX_SHAPES = 5
 
-while shape !="xxx" and count < MAX_SHAPES:
+while shape != "xxx" and count < MAX_SHAPES:
 
     # Get details...
     shape = not_blank("Shape: ")
@@ -155,13 +152,9 @@ while shape !="xxx" and count < MAX_SHAPES:
         break
     else:
         print(error_message)
-    count +=1
+    count += 1
 
-# Get dimensions of shape
 
 # Calculations
 
 # Print Area and Perimeter of shape
-
-
-

@@ -2,7 +2,10 @@
 component 6 v1 - setting up string check function
 '''
 
+# Functions
 
+
+# String checker
 def string_check(choice, options):
     for var_list in options:
 

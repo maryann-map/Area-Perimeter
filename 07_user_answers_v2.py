@@ -6,6 +6,7 @@ component 7 version 2 - asking user for their answers
 area = 5
 perimeter = 4
 
+# Ask user what area they got
 area_answer = int(input("What area did you get?"))
 
 # if user got same answer as programme then say 'good job'
@@ -15,6 +16,7 @@ if area_answer == area:
 else:
     print("Sorry that is wrong.")
 
+# Ask user what perimeter they got
 perimeter_answer = int(input("What perimeter did you get?"))
 
 # if user got same answer as programme then say 'good job'

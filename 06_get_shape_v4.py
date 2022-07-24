@@ -1,8 +1,13 @@
+'''
+component 6 v4 - asking user for a shape (contains lists of valid shape names)
+trying nested list skills to check that valid_shape name responds to each shape
 
+'''
 
 # function goes here
 
 
+# String checker
 def string_check(choice, options):
     for var_list in options:
 
@@ -95,4 +100,3 @@ else:
 
 print()
 print("Finish")
-

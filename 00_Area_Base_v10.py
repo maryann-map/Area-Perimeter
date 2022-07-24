@@ -43,12 +43,12 @@ def intro():
         if instructions not in "yes_no":
             print("Please enter yes or no.")
 
-        # If answer is yes
+        # If they want instructions
         elif instructions == "yes" or instructions == "y":
             get_instructions()
             break
 
-        # If answer is no
+        # If they do not want instructions
         elif instructions == "no" or instructions == "n":
             check_shape = "invalid choice"
             while check_shape == "invalid choice":
@@ -82,6 +82,7 @@ def get_instructions():
     print("1. Choose shape from one of the available shapes")
     print("2. Enter the dimensions of shape (eg: length & width")
     print("3. Enter your area and perimeter answer in 2 decimal place")
+    print("4. Enter xxx on 'Shape:' to end programme")
 
     # What to be aware of
     print()
@@ -442,12 +443,14 @@ perimeter_sum = []
 # Start programme
 intro()
 
-
+# Table of chosen shape and answers
 df = pd.DataFrame(list(zip(all_shapes, area_sum, perimeter_sum)), columns=['Shape', 'Area', 'Perimeter'])
 df = df.set_index('Shape')
 
 print()
 print()
+
+# Table of chosen shape and answers
 print(df)
 
 outro()

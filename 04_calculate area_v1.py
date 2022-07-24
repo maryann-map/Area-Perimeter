@@ -11,8 +11,3 @@ area = length * width
 
 # Show answer
 print("Area: {}".format(area))
-
-
-
-
-

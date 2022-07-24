@@ -15,9 +15,8 @@ import math
 
 # Functions
 
+
 # Getting the shape name and make sure it is not blank
-
-
 def not_blank(question):
     valid = False
 
@@ -134,6 +133,7 @@ def square():
     # Calculating Perimeter
     perimeter = (2*length) + (2*width)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -143,6 +143,7 @@ def square():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -167,6 +168,7 @@ def triangle():
     # Calculating Perimetr
     perimeter = side1 + side2 + base
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -176,6 +178,7 @@ def triangle():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -198,6 +201,7 @@ def rectangle():
     # Calculating Perimeter
     perimeter = (2*length) + (2*width)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -207,6 +211,7 @@ def rectangle():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -229,6 +234,7 @@ def circle():
     # Calculating Perimeter 2 pie r
     perimeter = 2 * math.pi * radius
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -238,6 +244,7 @@ def circle():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -262,6 +269,7 @@ def para():
     # Calculating Perimeter
     perimeter = 2 * (base + side)
 
+    # Ask user what they got for area
     user_area = int(input("What area did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -271,6 +279,7 @@ def para():
     else:
         print("Sorry that is wrong. The correct answer is {:.2f}.".format(area))
 
+    # Ask user what they got for perimeter
     user_perimeter = int(input("What perimeter did you get?"))
 
     # if user got same answer as programme then say 'good job'
@@ -295,6 +304,7 @@ check_shape = "invalid choice"
 while check_shape == "invalid choice":
     want_shape = input("Ready to pick a shape?").lower()
     check_shape = string_check(want_shape, yes_no)
+    # If user enters an answer that is not in the yes_no list
     if want_shape not in "yes_no":
         print("Please enter yes or no.")
     elif want_shape == "no" or want_shape == "n":

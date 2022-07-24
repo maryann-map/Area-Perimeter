@@ -14,9 +14,8 @@ import math
 
 # Functions
 
+
 # Getting the shape name and make sure it is not blank
-
-
 def not_blank(question):
     valid = False
 
@@ -75,6 +74,7 @@ def get_shape():
         # ask user for the shape they want and put it in lowercase
         desired_shape = input("Shape: ").lower()
 
+        # if user inputs xx then break loop
         if desired_shape == "xxx":
             break
 

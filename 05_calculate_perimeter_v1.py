@@ -11,8 +11,3 @@ perimeter = (2*length) + (2*width)
 
 # Show answer
 print("Area: {}".format(perimeter))
-
-
-
-
-

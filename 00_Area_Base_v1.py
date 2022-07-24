@@ -9,48 +9,49 @@ import random as r
 
 # Functions
 
-#Getting the shape name and make sure it is not blank
+
+# Getting the shape name and make sure it is not blank
 def not_blank(question):
     valid = False
 
     while not valid:
         response = input(question)
 
-        if response !="":
+        if response != "":
             return response
         else:
             print("Sorry, this can't be blank. "
                   "Please enter a shape name!")
 
+
 # Check if integer is valid (must be positive whole numbers)
 def int_checker():
     print("placeholder")
+
 
 # String checker
 def string_checker(list_of_allowable):
     print("place holder")
 
-# Addition function
+
+# Square function
 def square():
     print("place holder")
 
-# Subtraction function
+
+# Triangle function
 def triangle():
     print("place holder")
 
-# Multiplication function
+
+# Rectangle function
 def rectangle():
     print("place holder")
 
-# Division function
+
+# Circle function
 def circle():
     print("place holder")
-
-
-# Set up lists and constants
-answer_list = []
-yes_no_list = [["yes", "y"], ["no", "n"]]
-operands = ["+", "-", "*", "/"]
 
 
 # Main routine
@@ -64,5 +65,3 @@ shape = not_blank("Shape: ")
 # Calculations
 
 # Print Area and Perimeter of shape
-
-

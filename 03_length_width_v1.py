@@ -5,7 +5,7 @@ v1 - get integers for length and width of shape (using if statements)
 
 # code for length
 
-error = ("Please enter a valid integer")
+error = "Please enter a valid integer"
 
 length = int(input("Length: "))
 if length <= 0:
@@ -21,7 +21,4 @@ if width <= 0:
 else:
     print(width)
 
-#main routine
-
-
-
+# main routine

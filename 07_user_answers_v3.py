@@ -7,6 +7,7 @@ component 7 version 3 - if they got it wrong then print the correct answer
 area = 5
 perimeter = 4
 
+# Ask user what area they got
 user_area = int(input("What area did you get?"))
 
 # if user got same answer as programme then say 'good job'
@@ -16,6 +17,7 @@ if user_area == area:
 else:
     print("Sorry that is wrong. The correct answer is {}.".format(area))
 
+# Ask user what perimeter they got
 user_perimeter = int(input("What perimeter did you get?"))
 
 # if user got same answer as programme then say 'good job'

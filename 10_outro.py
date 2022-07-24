@@ -12,6 +12,3 @@ def outro():
 
 # Main routine
 outro()
-
-
-
