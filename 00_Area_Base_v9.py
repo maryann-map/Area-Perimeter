@@ -10,7 +10,7 @@ v5 - adding in string_checker & get_shape functions (include valid_shapes list)
 v6 - ask user what answer they got & compare with programmes answer (code in each shape function)
 v7 - summary of chosen shapes and their answers displayed in a table format
 v8 - introduction
-
+v9 - outro
 '''
 
 # Import library
@@ -19,8 +19,10 @@ import pandas as pd
 
 # Functions
 
+# Getting the shape name and make sure it is not blank
 
-# Start of program
+
+# Introduction
 def intro():
     # Welcome Statement & Title of Programme
     print()
@@ -29,7 +31,49 @@ def intro():
     # Explain what the programme does
     print("This programme can calculate the AREA and PERIMETER of 5 different shapes")
 
-    # How programme works
+    instructions = ""
+    while instructions != "n" or "no":
+
+        # ask user for the shape they want and put it in lowercase
+        instructions = input("Would you like the instructions?").lower()
+
+        # If answer is not yer or no
+        if instructions not in "yes_no":
+            print("Please enter yes or no.")
+
+        # If answer is yes
+        elif instructions == "yes" or instructions == "y":
+            get_instructions()
+            break
+
+        # If answer is no
+        elif instructions == "no" or instructions == "n":
+            check_shape = "invalid choice"
+            while check_shape == "invalid choice":
+
+                # Ask if they are ready to pick a shape
+                want_shape = input("Ready to pick a shape?").lower()
+                check_shape = string_check(want_shape, yes_no)
+
+                # If they answer other than yes or no
+                if want_shape not in "yes_no":
+                    print("Please enter yes or no.")
+                # If they answer no
+                elif want_shape == "no" or want_shape == "n":
+                    break
+
+            # if they say yes, ask what shape they want (and save it in chosen shape list)
+            if check_shape == "Yes":
+                get_shape()
+                break
+
+            else:
+                chosen_shape = []
+
+
+# How programme works
+def get_instructions():
+
     print("This is how it works:")
     print("1. Choose shape from one of the available shapes")
     print("2. Enter the dimensions of shape (eg: length & width")
@@ -44,8 +88,9 @@ def intro():
     print("These are the available shapes:")
     print("1 = Circle | 2 = Square | 3 = Rectangle | 4 = Triangle | 5 = Parallelogram")
 
+    return get_shape()
 
-# Getting the shape name and make sure it is not blank
+
 def not_blank(question):
     valid = False
 
@@ -130,7 +175,7 @@ def get_shape():
 # Check that integer is valid
 def int_checker(question):
 
-    error = "Please enter a valid integer"
+    error = "Please enter a positive number"
 
     valid = False
     while not valid:
@@ -339,6 +384,11 @@ def para():
         print("Sorry that is wrong. The correct answer is {}".format(round_perimeter))
 
 
+# End of Programme
+def outro():
+    print()
+    print("Thank you for using the Shape Calculator")
+
 # Main Routine
 
 
@@ -358,31 +408,13 @@ area_sum = []
 # List to store the perimeter of each shape (sum = summary)
 perimeter_sum = []
 
-# Start Programme
+# Start programme
 intro()
 
-# ask user if they are ready to pick a shape (start programme)
-check_shape = "invalid choice"
-while check_shape == "invalid choice":
-    want_shape = input("Ready to pick a shape?").lower()
-    check_shape = string_check(want_shape, yes_no)
-    if want_shape not in "yes_no":
-        print("Please enter yes or no.")
-    elif want_shape == "no" or want_shape == "n":
-        break
-
-# if they say yes, ask what shape they want (and save it in chosen shape list)
-if check_shape == "Yes":
-    get_shape()
-
-else:
-    chosen_shape = []
 
 df = pd.DataFrame(list(zip(all_shapes, area_sum, perimeter_sum)), columns=['Shape', 'Area', 'Perimeter'])
 df = df.set_index('Shape')
 
 print(df)
 
-
-print()
-print("Finish")
+outro()
